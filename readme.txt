@@ -1,1 +1,9 @@
-readme.txt
+Sabre Scribe is a Sabre technology that enables you to create scripts for automating the tasks of travel agents in Sabre Red Workspace classic view (classic view is native view in the Sabre GDS). The scripts are ASCII files that contain Sabre Scribe and Sabre GDS commands. The files also include expressions, variables, and strings. The Sabre Scribe compiler understands and converts the scripts into executable code.
+
+You can use any of the commands that the Sabre Scribe developer documentation describes, and wrap your compiled Sabre Scribe script files as plug-ins for Sabre Red Workspace. The wrapping of a Sabre Scribe script does not change the functionality of the script, but instead, it improves the deployment and version control of the scripts.
+
+The file type of the source scripts is sst and the file type of the compiled scripts is ssc. You include only the ssc file in the plug-in because it is used at runtime. As Sabre Red App certified developers, you are responsible for storing the sst source code files to ensure that you can maintain your Sabre Scribe Red Apps.
+
+You must designate your scripts as either visible or hidden. (Visible scripts are also referred to as main scripts, and hidden scripts are referred to as helper scripts.) Because visible scripts often call hidden scripts, end-users cannot see or choose hidden scripts. Main scripts typically use SPAWN and CHAIN to call helper scripts. (For more information, see the SPAWN and CHAIN commands in the Sabre Scribe Scripting Reference Guide.) If your project has a main script and a helper script, you include both scripts inside one wrapper plug-in.
+
+You cannot designate menu entries for your Sabre Scribe scripts. The Open SabreScript dialog in Sabre Red Workspace lists your scripts under the name of your wrapper plug-in. End-users can launch the Open SabreScript dialog in the following ways only when SRW has focus:
